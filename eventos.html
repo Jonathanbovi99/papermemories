@@ -1,0 +1,669 @@
+<!--
+Autor: Grupo N°4 
+Integrantes:
+	- Bonilla Vilchez, Jonathan
+	- Castro Fernandez, Paola
+	- Yomona Parraguez, Cinthya
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEMORIAS | Eventos | Paper Memories 3.0 </title>
+	<!--Etiquetas-->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!--Ventanas de diálogos-->
+	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+	<!--Rango de Precios-->
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui1.css">
+	<!--Fuentes-->
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">		
+</head>
+
+<body>
+	<!-- Aviso Cabezera -->
+	<div class="header-most-top">
+		<p>Próxima Feria de Libro del 19 de Julio al 04 de Agosto</p>
+	</div>
+
+	<!-- header-bot-->
+	<div class="header-bot">
+		<!--Clase para los media query-->
+		<div class="header-bot_inner_wthreeinfo_header_mid">
+			<!-- Logo-->
+			<div class="col-12 col-md-4 logo_agile">
+				<h1>
+					<a href="INDEXV3_0.html">
+						<img src="images/Pape_Memories_13.png" width = "50%" alt=" ">
+					</a>
+				</h1>
+			</div>
+			<!-- header-bot -->
+			<div class="col-md-8 header">
+				<!-- Lista de navegación -->
+				<ul>
+					<li>
+						<a class="play-icon popup-with-zoom-anim" href="#small-dialog1">
+						<span class="fa fa-map-marker" aria-hidden="true"></span> Localizar tiendas</a>
+					</li>
+					<li>
+						<a href="#" data-toggle="modal" data-target="#myModal1">
+						<span class="fa fa-truck" aria-hidden="true"></span>Buscar orden</a>
+					</li>
+					<li>
+						<span class="fa fa-phone" aria-hidden="true"></span> 001 234 5678
+					</li>
+					<li>
+						<a href="#" data-toggle="modal" data-target="#myModal1">
+						<span class="fa fa-unlock-alt" aria-hidden="true"></span> Regristarse </a>
+					</li>
+					<li>
+						<a href="#" data-toggle="modal" data-target="#myModal2">
+						<span class="fa fa-pencil-square-o" aria-hidden="true"></span> Iniciar Sesión </a>
+					</li>
+				</ul>
+				<!-- //Lista de navegación -->
+				<!-- Barra de buscar -->
+				<div class="agileits_search">
+					<form action="#" method="post">
+						<input name="Search" type="search" placeholder="¿Qué libro estás buscando?" required="">
+						<button type="submit" class="btn btn-default" aria-label="Left Align">
+							<span class="fa fa-search" aria-hidden="true"> </span>
+						</button>
+					</form>
+				</div>
+				<!-- //Barra de buscar -->
+
+				<!-- Detalle de mis compras 
+				<div class="top_nav_right">
+					<div class="wthreecartaits wthreecartaits2 cart cart box_1">
+						<form action="#" method="post" class="last">
+							<input type="hidden" name="cmd" value="_cart">
+							<input type="hidden" name="display" value="1">
+							<button class="w3view-cart" type="submit" name="submit" value="">
+								<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+							</button>
+						</form>
+					</div>
+				</div>
+				//Detalle de mis compras -->
+				<div class="clearfix"></div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- Localizar tiendas (ventana) -->
+	<div id="small-dialog1" class="mfp-hide">
+		<div class="select-city">
+			<h3>Seleccione por favor su ubicación</h3>
+			<select class="lista_de_lugares">
+				<optgroup label="Sitios Populares">
+					<option selected style="display:none;color:#eee;">Seleccionar Lugares</option>
+						<option>CC Real Plaza Piura </option>
+						<option>CC Megaplaza - Lima Norte</option>
+						<option>CC Plaza Norte</option>
+						<option>CC Real Plaza Piura </option>
+						<option>CC Open Plaza Angamos - Surquillo</option>
+						<option>CC Plaza San Miguel</option>
+				</optgroup>
+				<optgroup label="Lima">
+					<option>Jockey Plaza - Santiago de Surco</option>
+					<option>CC Real Plaza Primavera</option>
+					<option>Óvalo Gutierrez</option>
+					<option>CC Open Plaza Angamos - Surquillo</option>
+					<option>CC Plaza San Miguel</option>
+					<option>CC Real Plaza Centro Cívico</option>
+					<option>CC Real Plaza Salaverry </option>
+					<option>CC Megaplaza - Lima Norte</option>
+					<option>CC Plaza Norte</option>
+					<option>Caminos del Inca</option>
+					<option>Mall aventura Santa Anita</option>
+					<option>CC L ima Sur</option>
+				</optgroup>
+				<optgroup label="Arequipa">
+					<option>CC Plaza Arequipa </option>
+					<option>Mall aventura Arequipa </option>
+					<option>Arequipa Center </option>
+				</optgroup>
+				<optgroup label="Piura">
+					<option>CC Open Plza Piura </option>
+					<option>CC Real Plaza Piura </option>
+				</optgroup>
+				<optgroup label="Lambayeque">
+					<option>CC Real Plaza Piura </option>
+				</optgroup>
+				<optgroup label="Huancayo">
+						<option>CC Real Plaza Huancayo </option>
+				</optgroup>
+				<optgroup label="Cuzco">
+					<option>CC Real Plaza Cuzco</option>
+				</optgroup>
+				<optgroup label="Callao">
+					<option>CC Real Plaza Callao </option>
+				</optgroup>
+				<optgroup label="Huánuco">
+						<option>CC Open Plaza Huánuco </option>
+				</optgroup>
+			</select>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- //Localizar tiendas (ventana) -->
+
+	<!-- Barra de Navegación -->
+	<div class="ban-top">
+		<div class="container">
+			<!--Contenedor para cuando reduzca pantalla -->
+			<div class="top_nav_left">
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<!-- Se agrupan para una mejor visulización en el celular -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+		
+						<!-- Colección de los enlaces de navegación para el Menú Principal -->
+						<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
+							<!--Menu Principal-->
+							<ul class="nav navbar-nav menu__list">
+								<!--INICIO-->
+								<li class="active"><a class="nav-stylehead" href="INDEXV3_0.html"> Inicio <span class="sr-only">(current)</span> </a></li>
+								<!--NOSOTROS-->
+								<li class="dropdown"><a class="nav-stylehead dropdown-toggle" href="nosotros.html " data-toggle="dropdown">Nosotros<b class="caret"></b></a>
+									<ul class="dropdown-menu agile_short_dropdown">
+										<li><a href="quienessomos.html">¿Quiénes Somos</a></li>
+										<li><a href="misionyvision.html">Misión y Visión</a></li>
+									</ul>
+								</li>
+								<!--CATÁLOGO-->
+								<li class="dropdown"><a class="nav-stylehead dropdown-toggle" href="catálogo.html " data-toggle="dropdown">Catálogo<b class="caret"></b></a>
+									<ul class="dropdown-menu agile_short_dropdown">
+										<li><a href="porgeneros.html">Por Géneros</a></li>
+										<li><a href="portemasysubtemas.html">Por Temas y Subtemas</a></li>
+										<li><a href="poredades.html">Por Edades</a></li>
+									</ul>
+								</li>
+								<!--Carrito-->
+								<li class="active"><a class="nav-stylehead" href="Carrito.html">Carrito <span class="sr-only">(current)</span> </a></li>
+								<!--MEMORIAS-->
+								<li class="dropdown"><a class="nav-stylehead dropdown-toggle" href="memorias.html " data-toggle="dropdown">Memorias<b class="caret"></b></a>
+									<ul class="dropdown-menu agile_short_dropdown">
+										<li><a href="Galeria.html">Galería de fotos</a></li>
+										<li><a href="eventos.html">Eventos</a></li>
+										<li><a href="concursables.html">Concursables</a></li>
+										<li><a href="noticias.html">Noticias</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<!-- //Colección de los enlaces de navegación para el Menú Principal -->
+					</div>
+				</nav>
+			</div>
+			<!--//Contenedor para cuando reduzca pantalla-->
+		</div>		
+		<div class="clearfix"></div>
+	</div>
+	<!-- //Barra de Nvegación -->
+
+	<!-- Barra Prinicpal - Título -->
+	<div class="services-breadcrumb">
+		<div class="agile_inner_breadcrumb">
+			<div class="container">
+				<ul class="w3_short">
+					<li>
+						<a href="INDEXV3_0.html">Memorias</a>
+						<i>|</i>
+					</li>
+					<li>Eventos</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //Barra Prinicpal - Título -->
+
+	<!-- Eventos-->
+	<div class="privacy">
+		<div class="container">
+			<!-- tittle heading -->
+			<h3 class="tittle-w3l">Eventos 
+				<span class="heading-style">
+					<i></i>
+					<i></i>
+					<i></i>
+				</span>
+			</h3>
+			<!-- //tittle heading -->
+			<div class="checkout-right">
+				<!--Horizontal Tab-->
+				<div id="parentHorizontalTab">
+					<ul class="resp-tabs-list hor_1">
+						<li>2016</li>
+						<li>2017</li>
+						<li>2018</li>
+						<li>2019</li>
+					</ul>
+					<div class="resp-tabs-container hor_1">
+
+						<div>
+							<div class="vertical_post check_box_agile">
+							
+							<!-- Evento 1  -->
+								<div class="col-md-6 product-men">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item">
+											<img src="images/7.jpg"  width="100%" height="100%">
+										</div>
+										<div class="item-info-product ">
+											<h4>
+												<p>DEMOS MÁS</p>
+												<p>Evento en el cual se donaron recursos</p>
+												<p>a diversos países del continente Africano</p>
+												<p>entre ellos libros para la educación de los niños</p>
+											</h4>
+																			
+																			
+										
+										</div>
+									</div>
+								</div>
+									
+									
+							<div class="col-md-6 product-men">
+								<div class="row-md-3 product-men">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item">
+											<img src="images/8.jpg" alt="" width="70%" height="70%">
+									
+										</div>
+									</div>
+								</div>
+									
+							<br>
+							<br>
+									
+								<div class="row-md-3 impleCart_shelfItem">
+									<div class="men-thumb-item">
+										<img src="images/4.jpg" alt="" width="70%" height="70%">
+									
+									</div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+														
+							</div>
+
+							<!-- /Eventos 1 -->
+							
+						</div>
+
+					</div>
+
+
+					<div class="resp-tabs-container hor_1">
+
+						<div>
+							<div class="vertical_post check_box_agile">
+									
+							<!-- Evento 2  -->
+								<div class="col-md-6 product-men">
+										<div class="men-pro-item simpleCart_shelfItem">
+											<div class="men-thumb-item">
+												<img src="images/A2.jpg"  width="100%" height="70%">
+											</div>
+											<div class="item-info-product ">
+												<h4>
+													<p>BIBLIOTRECAS PARA TODOS</p>
+													<p>La actual directora de Paper Memories MG.Julia Mona</p>
+													<p>Construyo una biblioteca pública en la ciudad de Trujillo-Perú</p>
+													<p>con una colección de más de 5000 libros de todos los géneros</p>
+												</h4>
+																				
+																				
+											
+											</div>
+										</div>
+									</div>
+										
+										
+								<div class="col-md-6 product-men">
+									<div class="men-thumb-item">
+										<img src="images/9.jpg" alt="" width="70%" height="70%">
+										
+									</div>
+									
+								</div>
+								<div class="clearfix"></div>
+															
+								</div>
+	
+							<!-- /Eventos 2 -->		
+
+							
+						</div>
+	
+					</div>
+
+
+						<div class="resp-tabs-container hor_1">
+
+								<div>
+									<div class="vertical_post check_box_agile">
+									
+								<!-- Evento 3  -->
+								<div class="col-md-6 product-men">
+										<div class="men-pro-item simpleCart_shelfItem">
+											<div class="men-thumb-item">
+												<img src="images/12.jpg"  width="100%" height="100%">
+											</div>
+											<div class="item-info-product ">
+												<h4>
+													<p>ROCK AND RELIGION</p>
+													<p>Paper Memories promueve el talento </p>
+													<p>Festival de ROCK en la ciudad de Chiclayo-Perú</p>
+													<p>La plaza principal se lleno de animos al oír talento nacional</p>
+												</h4>
+																				
+																				
+											
+											</div>
+										</div>
+									</div>
+										
+										
+								<div class="col-md-6 product-men">
+									<div class="row-md-3 product-men">
+										<div class="men-pro-item simpleCart_shelfItem">
+											<div class="men-thumb-item">
+												<img src="images/13.jpg" alt="" width="70%" height="70%">
+										
+											</div>
+										</div>
+									</div>
+										
+								<br>
+								<br>
+										
+									<div class="row-md-3 impleCart_shelfItem">
+										<div class="men-thumb-item">
+											<img src="images/14.jpg" alt="" width="70%" height="70%">
+										
+										</div>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+															
+								</div>
+	
+								<!-- /Eventos 3 -->	
+		
+									
+								</div>
+		
+		
+		
+							</div>
+
+
+							<div class="resp-tabs-container hor_1">
+
+									<div>
+										<div class="vertical_post check_box_agile">
+										
+								<!-- Evento 4  -->
+								<div class="col-md-6 product-men">
+										<div class="men-pro-item simpleCart_shelfItem">
+											<div class="men-thumb-item">
+												<img src="images/7.jpg"  width="100%" height="100%">
+											</div>
+											<div class="item-info-product ">
+												<h4>
+													<p>DEMOS MÁS</p>
+													<p>Evento en el cual se donaron recursos</p>
+													<p>a diversos países del continente Africano</p>
+													<p>entre ellos libros para la educación de los niños</p>
+												</h4>
+																				
+																				
+											
+											</div>
+										</div>
+									</div>
+										
+										
+								<div class="col-md-6 product-men">
+									<div class="row-md-3 product-men">
+										<div class="men-pro-item simpleCart_shelfItem">
+											<div class="men-thumb-item">
+												<img src="images/8.jpg" alt="" width="70%" height="70%">
+										
+											</div>
+										</div>
+									</div>
+										
+								<br>
+								<br>
+										
+									<div class="row-md-3 impleCart_shelfItem">
+										<div class="men-thumb-item">
+											<img src="images/4.jpg" alt="" width="70%" height="70%">
+										
+										</div>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+															
+								</div>
+	
+								<!-- /Eventos 4 -->	
+			
+											
+			
+										
+									</div>
+			
+			
+									
+			
+								</div>
+				</div>
+				<!--Plug-in Initialisation-->
+			</div>
+		</div>
+	
+	<!-- //Eventos -->
+
+	
+	<!-- footer -->
+	<footer>
+			<div class="container">
+				
+				
+				<!-- footer third section -->
+				<div class="footer-info w3-agileits-info">
+					<!-- quick links -->
+					<div class="col-sm-5 address-right">
+						<div class="col-xs-6 footer-grids">
+							<h3>Atención al Cliente</h3>
+							<ul>
+								<li><a href="about.html">Preguntas Frecuentes</a></li>
+								<li><a href="contact.html">Trabaja con nosotros</a></li>
+								<li><a href="help.html">Libro de Reclamaciones</a></li>
+							</ul>
+						</div>
+						<div class="col-xs-6 footer-grids">
+							<h3>Encuentranos</h3>
+							<ul>
+								<li><i class="fa fa-map-marker"></i> 222 Polonia, Perú.</li>
+								<li><i class="fa fa-mobile"></i> 94368852 </li>
+								<li><i class="fa fa-phone"></i> +74 235845 </li>
+								<li><i class="fa fa-envelope-o"></i><a href="mailto:example@mail.com"> ayuda@papermeories.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- //quick links -->
+					<!-- social icons -->
+					<div class="col-sm-2 footer-grids  w3l-socialmk">
+						<h3>Contáctanos</h3>
+						<div class="social">
+							<ul>
+								<li><a class="icon fb" href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="icon tw" href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a class="icon gp" href="#"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- //social icons -->
+					<div class="clearfix"></div>
+				</div>
+				<!-- //footer third section -->
+					
+				<!-- footer fourth section (text) -->
+					<!-- payment -->
+					<div class="sub-some child-momu">
+						<h5>Método de Pago</h5>
+						<ul>
+							<li><img src="images/pay2.png" alt=""></li>
+							<li><img src="images/pay5.png" alt=""></li>
+							<li><img src="images/pay1.png" alt=""></li>
+							<li><img src="images/pay4.png" alt=""></li>
+							<li><img src="images/pay6.png" alt=""></li>
+							<li><img src="images/pay3.png" alt=""></li>
+							<li><img src="images/pay7.png" alt=""></li>
+							<li><img src="images/pay8.png" alt=""></li>
+							<li><img src="images/pay9.png" alt=""></li>
+						</ul>
+					</div>
+					<!-- //payment -->
+			</div>
+			<!-- //footer fourth section (text) -->
+			</div>
+	</footer>
+	<!-- //footer -->
+
+	<!-- copyright -->
+	<div class="copy-right">
+		<div class="container">
+			<p>© 2019 Paper_Memories. All rights reserved | Design by
+				<a href="http://w3layouts.com"> W3layouts.</a>
+			</p>
+		</div>
+	</div>
+	<!-- //copyright -->
+
+	<!-- js-files -->
+	<!-- jquery -->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<!-- //jquery -->
+
+	<!-- popup modal (for signin & signup)-->
+	<script src="js/jquery.magnific-popup.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+
+		});
+	</script>
+
+
+	<!-- easy-responsive-tabs -->
+	<link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
+	<script src="js/easyResponsiveTabs.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			//Horizontal Tab
+			$('#parentHorizontalTab').easyResponsiveTabs({
+				type: 'default', //Types: default, vertical, accordion
+				width: 'auto', //auto or any width like 600px
+				fit: true, // 100% fit in a container
+				tabidentify: 'hor_1', // The tab groups identifier
+				activate: function (event) { // Callback function if tab is switched
+					var $tab = $(this);
+					var $info = $('#nested-tabInfo');
+					var $name = $('span', $info);
+					$name.text($tab.text());
+					$info.show();
+				}
+			});
+		});
+	</script>
+	<!-- //easy-responsive-tabs -->
+
+
+	<!-- password-script -->
+	<script>
+		window.onload = function () {
+			document.getElementById("password1").onchange = validatePassword;
+			document.getElementById("password2").onchange = validatePassword;
+		}
+
+		function validatePassword() {
+			var pass2 = document.getElementById("password2").value;
+			var pass1 = document.getElementById("password1").value;
+			if (pass1 != pass2)
+				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+			else
+				document.getElementById("password2").setCustomValidity('');
+			//empty string means no validation error
+		}
+	</script>
+	<!-- //password-script -->
+
+	<!-- smoothscroll -->
+	<script src="js/SmoothScroll.min.js"></script>
+	<!-- //smoothscroll -->
+
+	<!-- start-smooth-scrolling -->
+	<script src="js/move-top.js"></script>
+	<script src="js/easing.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- //end-smooth-scrolling -->
+
+	<!-- smooth-scrolling-of-move-up -->
+	<script>
+		$(document).ready(function () {
+			
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!-- //smooth-scrolling-of-move-up -->
+
+	<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+	<!-- //for bootstrap working -->
+	<!-- //js-files -->
+
+</body>
+
+</html>

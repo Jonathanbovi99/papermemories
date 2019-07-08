@@ -1,0 +1,1017 @@
+<!--
+Autor: Grupo N°4 
+Integrantes:
+	- Bonilla Vilchez, Jonathan
+	- Castro Fernandez, Paola
+	- Yomona Parraguez, Cinthya
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATÁLOGO | Por Temas y Subtemas | Paper Memories 3.0 </title>
+	<!--Etiquetas-->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!--Ventanas de diálogos-->
+	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+	<!--Rango de Precios-->
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui1.css">
+	<!--Fuentes-->
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">		
+</head>
+
+<body>
+	<!-- Aviso Cabezera -->
+	<div class="header-most-top">
+		<p>Próxima Feria de Libro del 19 de Julio al 04 de Agosto</p>
+	</div>
+
+	<!-- header-bot-->
+	<div class="header-bot">
+		<!--Clase para los media query-->
+		<div class="header-bot_inner_wthreeinfo_header_mid">
+			<!-- Logo-->
+			<div class="col-12 col-md-4 logo_agile">
+				<h1>
+					<a href="index.html">
+						<img src="images/Pape_Memories_13.png" width = "50%" alt=" ">
+					</a>
+				</h1>
+			</div>
+			<!-- header-bot -->
+			<div class="col-md-8 header">
+				<!-- Lista de navegación -->
+				<ul>
+					<li>
+						<a class="play-icon popup-with-zoom-anim" href="#small-dialog1">
+						<span class="fa fa-map-marker" aria-hidden="true"></span> Localizar tiendas</a>
+					</li>
+					<li>
+						<a href="#" data-toggle="modal" data-target="#myModal1">
+						<span class="fa fa-truck" aria-hidden="true"></span>Buscar orden</a>
+					</li>
+					<li>
+						<span class="fa fa-phone" aria-hidden="true"></span> 001 234 5678
+					</li>
+					<li>
+						<a href="#" data-toggle="modal" data-target="#myModal1">
+						<span class="fa fa-unlock-alt" aria-hidden="true"></span> Regristarse </a>
+					</li>
+					<li>
+						<a href="#" data-toggle="modal" data-target="#myModal2">
+						<span class="fa fa-pencil-square-o" aria-hidden="true"></span> Iniciar Sesión </a>
+					</li>
+				</ul>
+				<!-- //Lista de navegación -->
+				<!-- Barra de buscar -->
+				<div class="agileits_search">
+					<form action="#" method="post">
+						<input name="Search" type="search" placeholder="¿Qué libro estás buscando?" required="">
+						<button type="submit" class="btn btn-default" aria-label="Left Align">
+							<span class="fa fa-search" aria-hidden="true"> </span>
+						</button>
+					</form>
+				</div>
+				<!-- //Barra de buscar -->
+
+				<!-- Detalle de mis compras 
+				<div class="top_nav_right">
+					<div class="wthreecartaits wthreecartaits2 cart cart box_1">
+						<form action="#" method="post" class="last">
+							<input type="hidden" name="cmd" value="_cart">
+							<input type="hidden" name="display" value="1">
+							<button class="w3view-cart" type="submit" name="submit" value="">
+								<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+							</button>
+						</form>
+					</div>
+				</div>
+				//Detalle de mis compras -->
+				<div class="clearfix"></div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- Localizar tiendas (ventana) -->
+	<div id="small-dialog1" class="mfp-hide">
+		<div class="select-city">
+			<h3>Seleccione por favor su ubicación</h3>
+			<select class="lista_de_lugares">
+				<optgroup label="Sitios Populares">
+					<option selected style="display:none;color:#eee;">Seleccionar Lugares</option>
+						<option>CC Real Plaza Piura </option>
+						<option>CC Megaplaza - Lima Norte</option>
+						<option>CC Plaza Norte</option>
+						<option>CC Real Plaza Piura </option>
+						<option>CC Open Plaza Angamos - Surquillo</option>
+						<option>CC Plaza San Miguel</option>
+				</optgroup>
+				<optgroup label="Lima">
+					<option>Jockey Plaza - Santiago de Surco</option>
+					<option>CC Real Plaza Primavera</option>
+					<option>Óvalo Gutierrez</option>
+					<option>CC Open Plaza Angamos - Surquillo</option>
+					<option>CC Plaza San Miguel</option>
+					<option>CC Real Plaza Centro Cívico</option>
+					<option>CC Real Plaza Salaverry </option>
+					<option>CC Megaplaza - Lima Norte</option>
+					<option>CC Plaza Norte</option>
+					<option>Caminos del Inca</option>
+					<option>Mall aventura Santa Anita</option>
+					<option>CC L ima Sur</option>
+				</optgroup>
+				<optgroup label="Arequipa">
+					<option>CC Plaza Arequipa </option>
+					<option>Mall aventura Arequipa </option>
+					<option>Arequipa Center </option>
+				</optgroup>
+				<optgroup label="Piura">
+					<option>CC Open Plza Piura </option>
+					<option>CC Real Plaza Piura </option>
+				</optgroup>
+				<optgroup label="Lambayeque">
+					<option>CC Real Plaza Piura </option>
+				</optgroup>
+				<optgroup label="Huancayo">
+						<option>CC Real Plaza Huancayo </option>
+				</optgroup>
+				<optgroup label="Cuzco">
+					<option>CC Real Plaza Cuzco</option>
+				</optgroup>
+				<optgroup label="Callao">
+					<option>CC Real Plaza Callao </option>
+				</optgroup>
+				<optgroup label="Huánuco">
+						<option>CC Open Plaza Huánuco </option>
+				</optgroup>
+			</select>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- //Localizar tiendas (ventana) -->
+
+	<!-- Barra de Navegación -->
+	<div class="ban-top">
+		<div class="container">
+			<!--Contenedor para cuando reduzca pantalla -->
+			<div class="top_nav_left">
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<!-- Se agrupan para una mejor visulización en el celular -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+		
+						<!-- Colección de los enlaces de navegación para el Menú Principal -->
+						<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
+							<!--Menu Principal-->
+							<ul class="nav navbar-nav menu__list">
+								<!--INICIO-->
+								<li class="active"><a class="nav-stylehead" href="index.html"> Inicio <span class="sr-only">(current)</span> </a></li>
+								<!--NOSOTROS-->
+								<li class="dropdown"><a class="nav-stylehead dropdown-toggle" href="nosotros.html " data-toggle="dropdown">Nosotros<b class="caret"></b></a>
+									<ul class="dropdown-menu agile_short_dropdown">
+										<li><a href="quienessomos.html">¿Quiénes Somos</a></li>
+										<li><a href="misionyvision.html">Misión y Visión</a></li>
+									</ul>
+								</li>
+								<!--CATÁLOGO-->
+								<li class="dropdown"><a class="nav-stylehead dropdown-toggle" href="catálogo.html " data-toggle="dropdown">Catálogo<b class="caret"></b></a>
+									<ul class="dropdown-menu agile_short_dropdown">
+										<li><a href="porgeneros.html">Por Géneros</a></li>
+										<li><a href="portemasysubtemas.html">Por Temas y Subtemas</a></li>
+										<li><a href="poredades.html">Por Edades</a></li>
+									</ul>
+								</li>
+								<!--Carrito-->
+								<li class="active"><a class="nav-stylehead" href="Carrito.html">Carrito <span class="sr-only">(current)</span> </a></li>
+								<!--MEMORIAS-->
+								<li class="dropdown"><a class="nav-stylehead dropdown-toggle" href="memorias.html " data-toggle="dropdown">Memorias<b class="caret"></b></a>
+									<ul class="dropdown-menu agile_short_dropdown">
+										<li><a href="Galeria.html">Galería de fotos</a></li>
+										<li><a href="eventos.html">Eventos</a></li>
+										<li><a href="concursables.html">Concursables</a></li>
+										<li><a href="noticias.html">Noticias</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<!-- //Colección de los enlaces de navegación para el Menú Principal -->
+					</div>
+				</nav>
+			</div>
+			<!--//Contenedor para cuando reduzca pantalla-->
+		</div>		
+		<div class="clearfix"></div>
+	</div>
+	<!-- //Barra de Nvegación -->
+
+	<!-- Barra Prinicpal - Título -->
+	<div class="services-breadcrumb">
+		<div class="agile_inner_breadcrumb">
+			<div class="container">
+				<ul class="w3_short">
+					<li>
+						<a href="catalogo.html">Catálogo</a>
+						<i>|</i>
+					</li>
+					<li>Por Temas y Subtemas</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //Barra Prinicpal - Título -->
+	
+	<!-- Catálogo de Libros -->
+	<div class="ads-grid">
+		<div class="container">
+			<!--Título -->
+			<h3 class="tittle-w3l">Temas y Subtemas
+				<span class="heading-style">
+					<i></i>
+					<i></i>
+					<i></i>
+				</span>
+			</h3>
+			<!-- // Título -->
+			<!-- Sección Izquierda -->
+			<div class="side-bar col-md-3">
+				<!--Sección de buscar-->
+				<div class="search-hotel">
+					<h3 class="agileits-sear-head">Buscar..</h3>
+					<form action="#" method="post">
+						<input type="search" placeholder="Nombre del Libro..." name="search" required="">
+						<input type="submit" value=" ">
+					</form>
+				</div>
+				<!--//Sección de buscar-->
+
+				<!-- Temas y Subtemas -->
+				<div class="left-side">
+					<h3 class="agileits-sear-head">Temas y Subtemas</h3>
+					<ul>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">Computación y tecnología</span>
+						</li>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">Arte, arquitectura y fotografpia</span>
+						</li>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">Educación</span>
+						</li>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">Historia</span>
+						</li>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">Cocina, comida y más</span>
+						</li>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">Medicina</span>
+						</li>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">Negocios y marketing</span>
+						</li>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">Ciencias Sociales</span>
+						</li>
+					</ul>
+				</div>
+				<!-- //Temas y Subtemas -->
+
+				<!--Editorial -->
+				<div class="left-side">
+					<!--Título-->
+					<h3 class="agileits-sear-head">Editorial</h3>
+					<!--Contenido-->
+					<ul>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">Plaza & Janés</span>
+						</li>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">Booket</span>
+						</li>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">Planeta</span>
+						</li>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">Alfaguara</span>
+						</li>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">Penguin Books</span>
+						</li>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">DeBolsillo</span>
+						</li>
+					</ul>
+				</div>
+				<!-- //Editorial -->
+				
+				<!-- Precio -->
+				<div class="left-side">
+					<!--Título-->
+					<h3 class="agileits-sear-head">Precio</h3>
+					<!--Contenido-->
+					<ul>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">10.00 - 49.90</span>
+						</li>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">50.00 - 99.90</span>
+						</li>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">100.00 - 299.90</span>
+						</li>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">300.00 - 599.90</span>
+						</li>
+						<li>
+							<input type="checkbox" class="checked">
+							<span class="span">+ 600.00</span>
+						</li>
+						
+					</ul>
+				</div>
+				<!-- //Precio -->				
+			</div>
+			<!-- //Sección Izquierda -->
+
+			<!-- Sección Derecha -->
+			<div class="agileinfo-ads-display col-md-9 w3l-rightpro">
+				<div class="wrapper">
+					<!-- ParteA -->
+					<div class="product-sec1">
+						<!--Libro1-->
+						<div class="col-xs-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<!--Imágen del Libro - Nuevo-->
+								<div class="men-thumb-item">
+									<img src="images/k1.jpg" alt="">									
+									<span class="product-new-top">Nuevo</span>
+								</div>
+								<!--Detalles del libro-->
+								<div class="product-name-w3l">
+									<!--Nombe del libro-->	
+									<div class="w3l-pricehkj">										
+										<h6>Nombre del libro</h6>
+									</div>
+									<!--Autor-->
+										<h4>Autor</h4>
+									<!--Estrella-->
+									<div class="rating1">
+										<span class="starRating">
+											<input id="rating5" type="radio" name="rating" value=""> <label for="rating5"></label>												
+											<input id="rating4" type="radio" name="rating" value=""> <label for="rating5"></label>												
+											<input id="rating3" type="radio" name="rating" value=""> <label for="rating5"></label>												
+											<input id="rating2" type="radio" name="rating" value="" checked=""> <label for="rating5"></label>	
+											<input id="rating1" type="radio" name="rating" value=""> <label for="rating5"></label>
+										</span>
+									</div>
+									<!--Precio -->
+									<div class="w3l-pricehkj">										
+										<p>Precio </p>
+									</div>										
+								</div>
+								<!--Botón de Añadir Carro-->
+								<div class="item-info-product ">
+									<!--Agregar datos del producto-->
+									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+										<form action="#" method="post">
+											<fieldset>										
+												<input type="submit" name="submit" value="¡Lo Quiero!" class="button" />
+											</fieldset>
+										</form>
+									</div>
+								</div>									
+							</div>
+						</div>
+						<!--//Libro1-->
+						<!--Libro2-->
+						<div class="col-xs-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<!--Imágen del Libro - Nuevo-->
+								<div class="men-thumb-item">
+									<img src="images/k2.jpg" alt="">									
+									<span class="product-new-top">Nuevo</span>
+								</div>
+								<!--Detalles del libro-->
+								<div class="product-name-w3l">
+									<!--Nombe del libro-->	
+									<div class="w3l-pricehkj">										
+										<h6>Nombre del libro</h6>
+									</div>
+									<!--Autor-->
+										<h4>Autor</h4>
+									<!--Estrella-->
+									<div class="rating1">
+										<span class="starRating">
+											<input id="rating5" type="radio" name="rating" value=""> <label for="rating5"></label>												
+											<input id="rating4" type="radio" name="rating" value=""> <label for="rating5"></label>												
+											<input id="rating3" type="radio" name="rating" value=""> <label for="rating5"></label>												
+											<input id="rating2" type="radio" name="rating" value="" checked=""> <label for="rating5"></label>	
+											<input id="rating1" type="radio" name="rating" value=""> <label for="rating5"></label>
+										</span>
+									</div>
+									<!--Precio -->
+									<div class="w3l-pricehkj">										
+										<p>Precio </p>
+									</div>										
+								</div>
+								<!--Botón de Añadir Carro-->
+								<div class="item-info-product ">
+									<!--Agregar datos del producto-->
+									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+										<form action="#" method="post">
+											<fieldset>										
+												<input type="submit" name="submit" value="¡Lo Quiero!" class="button" />
+											</fieldset>
+										</form>
+									</div>
+								</div>									
+							</div>
+						</div>
+						<!--//Libro2-->
+						<!--Libro3-->
+						<div class="col-xs-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<!--Imágen del Libro - Nuevo-->
+								<div class="men-thumb-item">
+									<img src="images/k3.jpg" alt="">									
+									<span class="product-new-top">Nuevo</span>
+								</div>
+								<!--Detalles del libro-->
+								<div class="product-name-w3l">
+									<!--Nombe del libro-->	
+									<div class="w3l-pricehkj">										
+										<h6>Nombre del libro</h6>
+									</div>
+									<!--Autor-->
+										<h4>Autor</h4>
+									<!--Estrella-->
+									<div class="rating1">
+										<span class="starRating">
+											<input id="rating5" type="radio" name="rating" value=""> <label for="rating5"></label>												
+											<input id="rating4" type="radio" name="rating" value=""> <label for="rating5"></label>												
+											<input id="rating3" type="radio" name="rating" value=""> <label for="rating5"></label>												
+											<input id="rating2" type="radio" name="rating" value="" checked=""> <label for="rating5"></label>	
+											<input id="rating1" type="radio" name="rating" value=""> <label for="rating5"></label>
+										</span>
+									</div>
+									<!--Precio -->
+									<div class="w3l-pricehkj">										
+										<p>Precio </p>
+									</div>										
+								</div>
+								<!--Botón de Añadir Carro-->
+								<div class="item-info-product ">
+									<!--Agregar datos del producto-->
+									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+										<form action="#" method="post">
+											<fieldset>										
+												<input type="submit" name="submit" value="¡Lo Quiero!" class="button" />
+											</fieldset>
+										</form>
+									</div>
+								</div>									
+							</div>
+						</div>
+						<!--//Libro3-->
+						<div class="clearfix"></div>
+					</div>
+					<!-- //ParteA -->
+
+					<!-- ParteB -->
+					<div class="product-sec1">
+							<!--Libro1-->
+							<div class="col-xs-4 product-men">
+								<div class="men-pro-item simpleCart_shelfItem">
+									<!--Imágen del Libro - Nuevo-->
+									<div class="men-thumb-item">
+										<img src="images/k4.jpg" alt="">
+									</div>
+									<!--Detalles del libro-->
+									<div class="product-name-w3l">
+										<!--Nombe del libro-->	
+										<div class="w3l-pricehkj">										
+											<h6>Nombre del libro</h6>
+										</div>
+										<!--Autor-->
+											<h4>Autor</h4>
+										<!--Estrella-->
+										<div class="rating1">
+											<span class="starRating">
+												<input id="rating5" type="radio" name="rating" value=""> <label for="rating5"></label>												
+												<input id="rating4" type="radio" name="rating" value=""> <label for="rating5"></label>												
+												<input id="rating3" type="radio" name="rating" value=""> <label for="rating5"></label>												
+												<input id="rating2" type="radio" name="rating" value="" checked=""> <label for="rating5"></label>	
+												<input id="rating1" type="radio" name="rating" value=""> <label for="rating5"></label>
+											</span>
+										</div>
+										<!--Precio -->
+										<div class="w3l-pricehkj">										
+											<p>Precio </p>
+										</div>										
+									</div>
+									<!--Botón de Añadir Carro-->
+									<div class="item-info-product ">
+										<!--Agregar datos del producto-->
+										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+											<form action="#" method="post">
+												<fieldset>										
+													<input type="submit" name="submit" value="¡Lo Quiero!" class="button" />
+												</fieldset>
+											</form>
+										</div>
+									</div>									
+								</div>
+							</div>
+							<!--//Libro1-->
+							<!--Libro2-->
+							<div class="col-xs-4 product-men">
+								<div class="men-pro-item simpleCart_shelfItem">
+									<!--Imágen del Libro - Nuevo-->
+									<div class="men-thumb-item">
+										<img src="images/k5.jpg" alt="">
+									</div>
+									<!--Detalles del libro-->
+									<div class="product-name-w3l">
+										<!--Nombe del libro-->	
+										<div class="w3l-pricehkj">										
+											<h6>Nombre del libro</h6>
+										</div>
+										<!--Autor-->
+											<h4>Autor</h4>
+										<!--Estrella-->
+										<div class="rating1">
+											<span class="starRating">
+												<input id="rating5" type="radio" name="rating" value=""> <label for="rating5"></label>												
+												<input id="rating4" type="radio" name="rating" value=""> <label for="rating5"></label>												
+												<input id="rating3" type="radio" name="rating" value=""> <label for="rating5"></label>												
+												<input id="rating2" type="radio" name="rating" value="" checked=""> <label for="rating5"></label>	
+												<input id="rating1" type="radio" name="rating" value=""> <label for="rating5"></label>
+											</span>
+										</div>
+										<!--Precio -->
+										<div class="w3l-pricehkj">										
+											<p>Precio </p>
+										</div>										
+									</div>
+									<!--Botón de Añadir Carro-->
+									<div class="item-info-product ">
+										<!--Agregar datos del producto-->
+										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+											<form action="#" method="post">
+												<fieldset>										
+													<input type="submit" name="submit" value="¡Lo Quiero!" class="button" />
+												</fieldset>
+											</form>
+										</div>
+									</div>									
+								</div>
+							</div>
+							<!--//Libro2-->
+							<!--Libro3-->
+							<div class="col-xs-4 product-men">
+								<div class="men-pro-item simpleCart_shelfItem">
+									<!--Imágen del Libro - Nuevo-->
+									<div class="men-thumb-item">
+										<img src="images/k6.jpg" alt="">
+									</div>
+									<!--Detalles del libro-->
+									<div class="product-name-w3l">
+										<!--Nombe del libro-->	
+										<div class="w3l-pricehkj">										
+											<h6>Nombre del libro</h6>
+										</div>
+										<!--Autor-->
+											<h4>Autor</h4>
+										<!--Estrella-->
+										<div class="rating1">
+											<span class="starRating">
+												<input id="rating5" type="radio" name="rating" value=""> <label for="rating5"></label>												
+												<input id="rating4" type="radio" name="rating" value=""> <label for="rating5"></label>												
+												<input id="rating3" type="radio" name="rating" value=""> <label for="rating5"></label>												
+												<input id="rating2" type="radio" name="rating" value="" checked=""> <label for="rating5"></label>	
+												<input id="rating1" type="radio" name="rating" value=""> <label for="rating5"></label>
+											</span>
+										</div>
+										<!--Precio -->
+										<div class="w3l-pricehkj">										
+											<p>Precio </p>
+										</div>										
+									</div>
+									<!--Botón de Añadir Carro-->
+									<div class="item-info-product ">
+										<!--Agregar datos del producto-->
+										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+											<form action="#" method="post">
+												<fieldset>										
+													<input type="submit" name="submit" value="¡Lo Quiero!" class="button" />
+												</fieldset>
+											</form>
+										</div>
+									</div>									
+								</div>
+						</div>
+						<!--//Libro3-->
+						<div class="clearfix"></div>
+					</div>
+					<!-- //ParteB -->
+
+					<!--Parte C-->
+					<div class="product-sec1">
+							<!--Libro1-->
+							<div class="col-xs-4 product-men">
+								<div class="men-pro-item simpleCart_shelfItem">
+									<!--Imágen del Libro - Nuevo-->
+									<div class="men-thumb-item">
+										<img src="images/k1.jpg" alt="">
+									</div>
+									<!--Detalles del libro-->
+									<div class="product-name-w3l">
+										<!--Nombe del libro-->	
+										<div class="w3l-pricehkj">										
+											<h6>Nombre del libro</h6>
+										</div>
+										<!--Autor-->
+											<h4>Autor</h4>
+										<!--Estrella-->
+										<div class="rating1">
+											<span class="starRating">
+												<input id="rating5" type="radio" name="rating" value=""> <label for="rating5"></label>												
+												<input id="rating4" type="radio" name="rating" value=""> <label for="rating5"></label>												
+												<input id="rating3" type="radio" name="rating" value=""> <label for="rating5"></label>												
+												<input id="rating2" type="radio" name="rating" value="" checked=""> <label for="rating5"></label>	
+												<input id="rating1" type="radio" name="rating" value=""> <label for="rating5"></label>
+											</span>
+										</div>
+										<!--Precio -->
+										<div class="w3l-pricehkj">										
+											<p>Precio </p>
+										</div>										
+									</div>
+									<!--Botón de Añadir Carro-->
+									<div class="item-info-product ">
+										<!--Agregar datos del producto-->
+										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+											<form action="#" method="post">
+												<fieldset>										
+													<input type="submit" name="submit" value="¡Lo Quiero!" class="button" />
+												</fieldset>
+											</form>
+										</div>
+									</div>									
+								</div>
+							</div>
+							<!--//Libro1-->
+							<!--Libro2-->
+							<div class="col-xs-4 product-men">
+								<div class="men-pro-item simpleCart_shelfItem">
+									<!--Imágen del Libro - Nuevo-->
+									<div class="men-thumb-item">
+										<img src="images/k2.jpg" alt="">
+									</div>
+									<!--Detalles del libro-->
+									<div class="product-name-w3l">
+										<!--Nombe del libro-->	
+										<div class="w3l-pricehkj">										
+											<h6>Nombre del libro</h6>
+										</div>
+										<!--Autor-->
+											<h4>Autor</h4>
+										<!--Estrella-->
+										<div class="rating1">
+											<span class="starRating">
+												<input id="rating5" type="radio" name="rating" value=""> <label for="rating5"></label>												
+												<input id="rating4" type="radio" name="rating" value=""> <label for="rating5"></label>												
+												<input id="rating3" type="radio" name="rating" value=""> <label for="rating5"></label>												
+												<input id="rating2" type="radio" name="rating" value="" checked=""> <label for="rating5"></label>	
+												<input id="rating1" type="radio" name="rating" value=""> <label for="rating5"></label>
+											</span>
+										</div>
+										<!--Precio -->
+										<div class="w3l-pricehkj">										
+											<p>Precio </p>
+										</div>										
+									</div>
+									<!--Botón de Añadir Carro-->
+									<div class="item-info-product ">
+										<!--Agregar datos del producto-->
+										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+											<form action="#" method="post">
+												<fieldset>										
+													<input type="submit" name="submit" value="¡Lo Quiero!" class="button" />
+												</fieldset>
+											</form>
+										</div>
+									</div>									
+								</div>
+							</div>
+							<!--//Libro2-->
+							<!--Libro3-->
+							<div class="col-xs-4 product-men">
+								<div class="men-pro-item simpleCart_shelfItem">
+									<!--Imágen del Libro - Nuevo-->
+									<div class="men-thumb-item">
+										<img src="images/k3.jpg" alt="">
+									</div>
+									<!--Detalles del libro-->
+									<div class="product-name-w3l">
+										<!--Nombe del libro-->	
+										<div class="w3l-pricehkj">										
+											<h6>Nombre del libro</h6>
+										</div>
+										<!--Autor-->
+											<h4>Autor</h4>
+										<!--Estrella-->
+										<div class="rating1">
+											<span class="starRating">
+												<input id="rating5" type="radio" name="rating" value=""> <label for="rating5"></label>												
+												<input id="rating4" type="radio" name="rating" value=""> <label for="rating5"></label>												
+												<input id="rating3" type="radio" name="rating" value=""> <label for="rating5"></label>												
+												<input id="rating2" type="radio" name="rating" value="" checked=""> <label for="rating5"></label>	
+												<input id="rating1" type="radio" name="rating" value=""> <label for="rating5"></label>
+											</span>
+										</div>
+										<!--Precio -->
+										<div class="w3l-pricehkj">										
+											<p>Precio </p>
+										</div>										
+									</div>
+									<!--Botón de Añadir Carro-->
+									<div class="item-info-product ">
+										<!--Agregar datos del producto-->
+										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+											<form action="#" method="post">
+												<fieldset>										
+													<input type="submit" name="submit" value="¡Lo Quiero!" class="button" />
+												</fieldset>
+											</form>
+										</div>
+									</div>									
+								</div>
+							</div>
+							<!--//Libro3-->
+							<div class="clearfix"></div>
+						</div>						
+					<!--//Parte C-->	
+			</div>
+			<!-- //Sección Derecha -->
+		</div>
+	</div>
+	<!-- //Catálogo de Libros -->
+
+	<!-- footer -->
+	<footer>
+		<div class="container">
+			<!-- footer Primera Sección -->
+			<div class="w3l-grids-footer">
+				<!--Revisa tu orden-->
+				<div class="col-xs-4 offer-footer">
+					<div class="col-xs-4 icon-fot">
+						<span class="fa fa-map-marker" aria-hidden="true"></span>
+					</div>
+					<div class="col-xs-8 text-form-footer">
+						<h3>Revisa tu Orden</h3>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<!--//Revisa tu orden-->
+				<!--Devoluciones-->
+				<div class="col-xs-4 offer-footer">
+					<div class="col-xs-4 icon-fot">
+						<span class="fa fa-refresh" aria-hidden="true"></span>
+					</div>
+					<div class="col-xs-8 text-form-footer">
+						<h3>Devoluciones</h3>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<!--Devoluciones-->
+				<!--Cancelación-->
+				<div class="col-xs-4 offer-footer">
+					<div class="col-xs-4 icon-fot">
+						<span class="fa fa-times" aria-hidden="true"></span>
+					</div>
+					<div class="col-xs-8 text-form-footer">
+						<h3>Cancelación en Línea </h3>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<!--//Cancelación-->
+				<div class="clearfix"></div>
+			</div>
+			<!-- //footer Primera Sección -->
+			
+			<!-- footer Segunda Sección -->
+			<div class="footer-info w3-agileits-info">
+				<!--Detalle de la Página-->
+				<div class="col-sm-5 address-right">
+					<!--Atención al Cliente-->
+					<div class="col-xs-6 footer-grids">
+						<h3>Atención al Cliente</h3>
+						<ul>
+							<li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+							<li><a href="trabaja.html">Trabaja con nosotros</a></li>
+							
+						</ul>
+						<ul>
+							<li><a  href="https://www.indecopi.gob.pe/presenta-tu-reclamo-conversa-nosotros" target="_blank>Libro de Reclamaciones</a></li>
+						</ul>
+					</div>
+					<!--Encuentranos-->
+					<div class="col-xs-6 footer-grids">
+						<h3>Encuentranos</h3>
+						<ul>
+							<li><i class="fa fa-map-marker"></i> 222 Polonia, Perú.</li>
+							<li><i class="fa fa-mobile"></i> 94368852 </li>
+							<li><i class="fa fa-phone"></i> +74 235845 </li>
+							<li><i class="fa fa-envelope-o"></i><a href="mailto:cinthyayomonaparraguez@gmail.com"> ayuda@papermeories.com</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- //Detalle de la Página (Contáctanos)-->
+				<!-- Páginas Sociales   -->
+				<div class="col-sm-2 footer-grids  w3l-socialmk">
+					<h3>Contáctanos</h3>
+					<div class="social">
+						<ul>
+							<li><a class="icon fb" href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a class="icon tw" href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a class="icon gp" href="#"><i class="fa fa-google-plus"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- //Páginas Sociales (Contáctanos) -->
+				<div class="clearfix"></div>
+			</div>
+			<!-- //footer Segunda Sección -->
+				
+			<!-- footr Métodos de Pago -->
+			<div class="sub-some child-momu">
+				<h5>Método de Pago</h5>
+				<ul>
+					<li><img src="images/pay2.png" alt=""></li>
+					<li><img src="images/pay5.png" alt=""></li>
+					<li><img src="images/pay1.png" alt=""></li>
+					<li><img src="images/pay4.png" alt=""></li>
+					<li><img src="images/pay6.png" alt=""></li>
+					<li><img src="images/pay3.png" alt=""></li>
+					<li><img src="images/pay7.png" alt=""></li>
+					<li><img src="images/pay8.png" alt=""></li>
+					<li><img src="images/pay9.png" alt=""></li>
+				</ul>
+			</div>
+			<!-- //footer Métodos de Pago-->
+		</div>
+	</footer>
+	<!-- //footer -->
+	
+	<!-- Copyright -->
+	<div class="copy-right">
+		<div class="container">
+			<p>© 2019 Paper Memories. Todos los Reservados | Diseñado por
+				<a href="http://designteam.com"> Design Team.</a>
+			</p>
+		</div>
+	</div>
+	<!-- //Copyright -->		
+	
+	<!--Script y JQUERY-->
+		<!-- Modelo de Ventana Emergente (para registrarme & Iniciar Sesión)-->
+            <!--File-->
+            <script src="js/jquery-2.1.4.min.js"></script>
+            <script src="js/jquery.magnific-popup.js"></script>
+            <!--//File-->                            
+				<script>
+					$(document).ready(function () {
+						$('.popup-with-zoom-anim').magnificPopup({
+							type: 'inline',
+							fixedContentPos: false,
+							fixedBgPos: true,
+							overflowY: 'auto',
+							closeBtnInside: true,
+							preloader: false,
+							midClick: true,
+							removalDelay: 300,
+							mainClass: 'my-mfp-zoom-in'
+						});	
+					});
+				</script>
+					<!-- Large modal -->
+					<!-- <script>
+						$('#').modal('show');
+					</script> -->
+		<!-- //Modelo de Ventana Emergente (para registrarme & Iniciar Sesión)-->
+
+		<!--Detalle de mis Compras-->
+			<!--File-->
+			<script src="js/minicart.js"></script>
+			<!--//File-->
+			<script>
+				paypalm.minicartk.render(); 		
+				paypalm.minicartk.cart.on('checkout', function (evt) {
+					var items = this.items(),
+						len = items.length,
+						total = 0,
+						i;
+		
+					// Cuenta el número de artículos en el carrito
+					for (i = 0; i < len; i++) {
+						total += items[i].get('Cantidad');
+					}
+		
+					if (total < 1) {
+						alert('La cantidad mínima de pedido es 1. Agregue más a su carrito de compras antes de pagar');
+						evt.preventDefault();
+					}
+				});
+			</script>
+		<!--//Detalle de mis Compras-->
+		
+		<!--Primer Panel (Flexisel)-->
+			<!--File-->
+			<script src="js/jquery.flexisel.js"></script>
+			<!--//File-->
+			<script>
+				$(window).load(function () {
+					$("#flexiselDemo1").flexisel({
+						visibleItems: 3,
+						animationSpeed: 1000,
+						autoPlay: true,
+						autoPlaySpeed: 3000,
+						pauseOnHover: true,
+						enableResponsiveBreakpoints: true,
+						responsiveBreakpoints: {
+							portrait: {
+								changePoint: 480,
+								visibleItems: 1
+							},
+							landscape: {
+								changePoint: 640,
+								visibleItems: 2
+							},
+							tablet: {
+								changePoint: 768,
+								visibleItems: 2
+							}
+						}
+					});
+		
+				});
+			</script>
+		<!--//Primer Panel (Flexisel)-->
+
+		<!--Smoothscroll-->
+			<!--File-->
+			<script src="js/SmoothScroll.min.js"></script>				
+			<!--//File-->
+				<!-- Derecha e Izquierda la Pantalla -->
+				<!--File-->
+				<script src="js/move-top.js"></script>
+				<script src="js/easing.js"></script>
+				<!--//File-->
+				<script>
+					jQuery(document).ready(function ($) {
+						$(".scroll").click(function (event) {
+							event.preventDefault();
+							$('html,body').animate({
+								scrollTop: $(this.hash).offset().top
+							}, 1000);
+						});
+					});
+				</script>
+				<!-- //Derecha e Izquierda la Pantalla -->				
+		<!--//Smoothscroll-->
+		<!-- JQUERY - bootstrap  -->
+		<script src="js/bootstrap.js"></script>
+		<!-- //JQUERY - bootstrap  -->
+	<!--//Script y JQUERY-->
+
+</body>
+
+</html>
